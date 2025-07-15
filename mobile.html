@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOLDEN TIGER GYM — mobile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+      color: #111;
+    }
+    .mobile-main { display: none; }
+    @media (max-width: 600px) {
+      .mobile-main {
+        display: block;
+        max-width: 430px;
+        margin: 0 auto;
+        padding: 0 0 32px 0;
+        background: #fafafa;
+        min-height: 100vh;
+      }
+      .mobile-header {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 24px 18px 0 18px;
+        gap: 10px;
+      }
+      .mobile-header-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+      }
+      .mobile-address {
+        font-size: 0.98rem;
+        color: #bdbdbd;
+        margin-bottom: 8px;
+        font-weight: 400;
+      }
+      .mobile-title {
+        font-size: 2.2rem;
+        font-weight: 900;
+        letter-spacing: 0.01em;
+        line-height: 1.05;
+        margin-bottom: 8px;
+        color: #111;
+      }
+      .mobile-slogan {
+        font-size: 0.98rem;
+        color: #bdbdbd;
+        font-weight: 500;
+        margin-bottom: 0;
+      }
+      .mobile-header-img {
+        width: 200px;
+        height: 250px;
+        object-fit: contain;
+        margin-left: 8px;
+        margin-top: -12px;
+      }
+    }
+    @media (max-width: 500px) {
+      .mobile-header-img { width: 150px; height: 180px; }
+    }
+    .mobile-btns {
+      display: flex;
+      flex-direction: row;
+      gap: 14px;
+      justify-content: center;
+      margin: 28px 0 24px 0;
+      padding: 0 18px;
+    }
+    .mobile-btn {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1.08rem;
+      font-weight: 700;
+      border-radius: 12px;
+      padding: 16px 22px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .mobile-btn.primary {
+      background: #111;
+      color: #fff;
+    }
+    .mobile-btn.secondary {
+      background: #fff;
+      color: #ff9100;
+      border: 2px solid #ff9100;
+    }
+    .mobile-btn.secondary:active, .mobile-btn.secondary:hover {
+      background: #ff9100;
+      color: #fff;
+    }
+    .mobile-video-wrap {
+      width: 100%;
+      padding: 0 18px;
+      margin: 0 auto;
+      margin-bottom: 0;
+    }
+    .mobile-video {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 22px;
+      margin: 0 auto;
+      display: block;
+      background: #000;
+      object-fit: cover;
+      aspect-ratio: 16/9;
+      min-height: 180px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    }
+    // вставка новых стилей для блока стоимости
+    .mobile-prices {
+      margin: 32px 0 0 0;
+      padding: 0 18px;
+    }
+    .mobile-prices-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .mobile-prices-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .mobile-price-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      padding: 18px 18px 14px 18px;
+      color: #222;
+      border: 2px solid transparent;
+    }
+    .mobile-price-card__duration {
+      color: #ff9100;
+      font-weight: 600;
+      font-size: 1.08rem;
+      margin-bottom: 6px;
+    }
+    .mobile-price-card__price {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .mobile-price-card__desc {
+      color: #888;
+      font-size: 0.98rem;
+    }
+    .mobile-price-card--active {
+      border: 2px solid #ff9100;
+      background: #fff;
+    }
+    .mobile-prices-table-block {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      padding: 16px 12px 12px 12px;
+      margin-top: 10px;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .mobile-prices-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 12px;
+    }
+    .mobile-prices-table th, .mobile-prices-table td {
+      padding: 5px 6px;
+      text-align: left;
+      font-size: 0.98rem;
+    }
+    .mobile-prices-table th {
+      color: #888;
+      font-weight: 500;
+      border-bottom: 1px solid #eee;
+    }
+    .mobile-prices-table td {
+      color: #222;
+      border-bottom: 1px solid #f3f3f3;
+    }
+    .mobile-trial-signup {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 4px;
+      gap: 10px;
+    }
+    .mobile-trial-signup span {
+      font-size: 0.98rem;
+      color: #222;
+    }
+    .mobile-trial-btn {
+      background: #ff9100;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-size: 1rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .mobile-trial-btn:hover {
+      background: #ffb300;
+    }
+    /* Стили для блока тренеров */
+    .mobile-trainers {
+      margin: 38px 0 0 0;
+      padding: 0 18px;
+    }
+    .mobile-trainers-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .mobile-trainer-card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      margin-bottom: 28px;
+      padding: 28px 18px 28px 0;
+      position: relative;
+      min-height: 180px;
+    }
+    .mobile-trainer-photo {
+      width: 120px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-left: -24px;
+      margin-right: 22px;
+      background: #eee;
+      flex-shrink: 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .mobile-trainer-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .mobile-trainer-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #111;
+    }
+    .mobile-trainer-desc {
+      font-size: 0.98rem;
+      color: #444;
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+    .mobile-trainer-icons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .mobile-trainer-icon {
+      width: 22px;
+      height: 22px;
+      display: inline-block;
+    }
+    @media (max-width: 600px) {
+      .mobile-schedule {
+        margin: 38px 0 0 0;
+        padding: 0 18px;
+      }
+      .mobile-schedule-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2rem;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 18px;
+      }
+      .mobile-schedule-table-wrap {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+        padding: 10px 6px 10px 6px;
+        margin-bottom: 24px;
+        overflow-x: auto;
+      }
+      .mobile-schedule-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.95rem;
+        min-width: 540px;
+      }
+      .mobile-schedule-table th {
+        background: #ff9100;
+        color: #fff;
+        font-weight: 700;
+        padding: 6px 4px;
+        border-radius: 6px 6px 0 0;
+        border: none;
+      }
+      .mobile-schedule-table td {
+        background: #fff;
+        color: #222;
+        padding: 6px 4px;
+        border-bottom: 1px solid #f3f3f3;
+        text-align: center;
+        min-width: 60px;
+      }
+      .mobile-schedule-table tr:last-child td {
+        border-bottom: none;
+      }
+      .mobile-footer-info {
+        margin: 32px 0 0 0;
+        padding: 0 18px 18px 18px;
+        color: #888;
+        font-size: 1rem;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.5;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="mobile-main">
+    <div class="mobile-header">
+      <div class="mobile-header-left">
+        <div class="mobile-address">ул. ЛОДЫГИНА 15<br>9:00 - 23:00</div>
+        <div class="mobile-title">GOLDEN<br>TIGER<br>GYM</div>
+      </div>
+      <img class="mobile-header-img" src="images/kubok.png" alt="Golden Tyger Statue">
+    </div>
+    <div class="mobile-btns">
+      <button class="mobile-btn primary">Купить абонемент</button>
+      <button class="mobile-btn secondary">Личный кабинет</button>
+    </div>
+    <div class="mobile-video-wrap">
+      <video class="mobile-video" src="images/video/roomtour.mp4" autoplay muted loop playsinline poster="images/grouphoto.jpg"></video>
+    </div>
+    <!-- Блок стоимости -->
+    <div class="mobile-prices">
+      <h2 class="mobile-prices-title">Стоимость</h2>
+      <div class="mobile-prices-cards">
+        <div class="mobile-price-card">
+          <div class="mobile-price-card__duration">3 месяца</div>
+          <div class="mobile-price-card__price">10 500 ₽</div>
+          <div class="mobile-price-card__desc">Безлимитный доступ<br>к тренажёрному залу</div>
+        </div>
+        <div class="mobile-price-card mobile-price-card--active">
+          <div class="mobile-price-card__duration">6 месяцев</div>
+          <div class="mobile-price-card__price">18 900 ₽</div>
+          <div class="mobile-price-card__desc">Безлимитный доступ<br>+ 2 гостевых визита</div>
+        </div>
+        <div class="mobile-price-card">
+          <div class="mobile-price-card__duration">12 месяцев</div>
+          <div class="mobile-price-card__price">34 000 ₽</div>
+          <div class="mobile-price-card__desc">Безлимитный доступ<br>+ 5 гостевых визитов</div>
+        </div>
+      </div>
+      <div class="mobile-prices-table-block">
+        <table class="mobile-prices-table">
+          <thead>
+            <tr>
+              <th>Тренировка</th>
+              <th>Цена</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Растяжка</td><td>700 ₽</td></tr>
+            <tr><td>Йога</td><td>900 ₽</td></tr>
+            <tr><td>Пилатес</td><td>900 ₽</td></tr>
+            <tr><td>Растяжка</td><td>700 ₽</td></tr>
+            <tr><td>Йога</td><td>900 ₽</td></tr>
+            <tr><td>Пилатес</td><td>900 ₽</td></tr>
+            <tr><td>Растяжка</td><td>700 ₽</td></tr>
+            <tr><td>Йога</td><td>900 ₽</td></tr>
+            <tr><td>Пилатес</td><td>900 ₽</td></tr>
+          </tbody>
+        </table>
+        <div class="mobile-trial-signup">
+          <span>Записаться на пробную тренировку</span>
+          <button class="mobile-trial-btn">Записаться</button>
+        </div>
+      </div>
+    </div>
+    <!-- Блок тренеров -->
+    <div class="mobile-trainers">
+      <h2 class="mobile-trainers-title">Тренируйся среди лучших</h2>
+      <div class="mobile-trainer-card">
+        <img class="mobile-trainer-photo" src="images/trainers/devka1.png" alt="Анна Смирнова">
+        <div class="mobile-trainer-info">
+          <div class="mobile-trainer-name">Анна Смирнова</div>
+          <div class="mobile-trainer-desc">Тренер по фитнесу и растяжке.<br>Сертифицированный специалист.<br>Поможет достичь ваших целей с заботой и вниманием.</div>
+          <div class="mobile-trainer-icons">
+            <span class="mobile-trainer-icon">🏆</span>
+            <span class="mobile-trainer-icon">👩‍🏫</span>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-trainer-card">
+        <img class="mobile-trainer-photo" src="images/trainers/Rectangle_59_1.png" alt="Алексей Петров">
+        <div class="mobile-trainer-info">
+          <div class="mobile-trainer-name">Алексей Петров</div>
+          <div class="mobile-trainer-desc">Эксперт по силовым тренировкам.<br>Мастер спорта.<br>Вдохновляет и поддерживает на каждом этапе.</div>
+          <div class="mobile-trainer-icons">
+            <span class="mobile-trainer-icon">🏆</span>
+            <span class="mobile-trainer-icon">👨‍🏫</span>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-trainer-card">
+        <img class="mobile-trainer-photo" src="images/trainers/i.webp" alt="Мария Иванова">
+        <div class="mobile-trainer-info">
+          <div class="mobile-trainer-name">Мария Иванова</div>
+          <div class="mobile-trainer-desc">Групповые и персональные тренировки.<br>Дружелюбный подход.<br>Заряжает энергией и позитивом.</div>
+          <div class="mobile-trainer-icons">
+            <span class="mobile-trainer-icon">🏆</span>
+            <span class="mobile-trainer-icon">👩‍🏫</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Блок расписания -->
+    <div class="mobile-schedule">
+      <h2 class="mobile-schedule-title">Расписание</h2>
+      <div class="mobile-schedule-table-wrap">
+        <table class="mobile-schedule-table">
+          <thead>
+            <tr>
+              <th>Время</th>
+              <th>Пн</th>
+              <th>Вт</th>
+              <th>Ср</th>
+              <th>Чт</th>
+              <th>Пт</th>
+              <th>Сб</th>
+              <th>Вс</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>09:00</td><td>ALLBODY</td><td></td><td>SUPER DRIVE</td><td></td><td>SUPER DRIVE</td><td></td><td></td></tr>
+            <tr><td>10:00</td><td></td><td>PLAY FIT</td><td></td><td>SUPER DRIVE</td><td></td><td>FITBALL</td><td>FUNCTIONAL</td></tr>
+            <tr><td>11:00</td><td></td><td></td><td>YOGA</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>12:00</td><td></td><td></td><td></td><td>STRETCH MOB</td><td></td><td></td><td></td></tr>
+            <tr><td>13:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>18:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>19:00</td><td>Boxing (бокс)</td><td></td><td>Boxing (бокс)</td><td></td><td>Fighter</td><td></td><td></td></tr>
+            <tr><td>20:00</td><td>ЙОГА</td><td></td><td>ЙОГА</td><td></td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Информация внизу -->
+    <div class="mobile-footer-info">
+      <div>ЗОЛОТОЙ ТИГР 2025</div>
+      <div>CONTACT: goldentyger@gmail.com</div>
+      <div>ИНН: 6656166123393</div>
+    </div>
+  </div>
+</body>
+</html> 

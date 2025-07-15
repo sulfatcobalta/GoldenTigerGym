@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>goldentyger.gym</title>
+  <style>
+    .mobile-main-index { display: none; }
+    @media (max-width: 600px) {
+      .mobile-main-index { display: block !important; }
+    }
+  </style>
+  <link rel="stylesheet" href="css.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="mobile-main-index">
+    <div class="mobile-header">
+      <div class="mobile-header-left">
+        <div class="mobile-address">ул. ЛОДЫГИНА 15<br>9:00 - 23:00</div>
+        <div class="mobile-title">GOLDEN<br>TIGER<br>GYM</div>
+      </div>
+      <img class="mobile-header-img" src="images/kubok.png" alt="Golden Tyger Statue">
+    </div>
+    <div class="mobile-btns">
+      <button class="mobile-btn primary">Купить абонемент</button>
+      <button class="mobile-btn secondary">Личный кабинет</button>
+    </div>
+    <div class="mobile-video-wrap">
+      <video class="mobile-video" src="images/video/roomtour.mp4" autoplay muted loop playsinline poster="images/grouphoto.jpg"></video>
+    </div>
+    <!-- Стоимость -->
+    <div class="mobile-prices">
+      <h2 class="mobile-prices-title">Стоимость</h2>
+      <div class="mobile-prices-cards">
+        <div class="mobile-price-card">
+          <div class="mobile-price-card__duration">3 месяца</div>
+          <div class="mobile-price-card__price">10 500 ₽</div>
+          <div class="mobile-price-card__desc">Безлимитный доступ<br>к тренажёрному залу</div>
+        </div>
+        <div class="mobile-price-card mobile-price-card--active">
+          <div class="mobile-price-card__duration">6 месяцев</div>
+          <div class="mobile-price-card__price">18 900 ₽</div>
+          <div class="mobile-price-card__desc">Безлимитный доступ<br>+ 2 гостевых визита</div>
+        </div>
+        <div class="mobile-price-card">
+          <div class="mobile-price-card__duration">12 месяцев</div>
+          <div class="mobile-price-card__price">34 000 ₽</div>
+          <div class="mobile-price-card__desc">Безлимитный доступ<br>+ 5 гостевых визитов</div>
+        </div>
+      </div>
+      <div class="mobile-prices-table-block">
+        <table class="mobile-prices-table">
+          <thead>
+            <tr>
+              <th>Тренировка</th>
+              <th>Цена</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Растяжка</td><td>700 ₽</td></tr>
+            <tr><td>Йога</td><td>900 ₽</td></tr>
+            <tr><td>Пилатес</td><td>900 ₽</td></tr>
+            <tr><td>Растяжка</td><td>700 ₽</td></tr>
+            <tr><td>Йога</td><td>900 ₽</td></tr>
+            <tr><td>Пилатес</td><td>900 ₽</td></tr>
+            <tr><td>Растяжка</td><td>700 ₽</td></tr>
+            <tr><td>Йога</td><td>900 ₽</td></tr>
+            <tr><td>Пилатес</td><td>900 ₽</td></tr>
+          </tbody>
+        </table>
+        <div class="mobile-trial-signup">
+          <span>Записаться на пробную тренировку</span>
+          <button class="mobile-trial-btn">Записаться</button>
+        </div>
+      </div>
+    </div>
+    <!-- Тренеры -->
+    <div class="mobile-trainers">
+      <h2 class="mobile-trainers-title">Тренируйся среди лучших</h2>
+      <div class="mobile-trainer-card">
+        <img class="mobile-trainer-photo" src="images/trainers/devka1.png" alt="Анна Смирнова">
+        <div class="mobile-trainer-info">
+          <div class="mobile-trainer-name">Анна Смирнова</div>
+          <div class="mobile-trainer-desc">Тренер по фитнесу и растяжке.<br>Сертифицированный специалист.<br>Поможет достичь ваших целей с заботой и вниманием.</div>
+          <div class="mobile-trainer-icons">
+            <span class="mobile-trainer-icon">🏆</span>
+            <span class="mobile-trainer-icon">👩‍🏫</span>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-trainer-card">
+        <img class="mobile-trainer-photo" src="images/trainers/Rectangle_59_1.png" alt="Алексей Петров">
+        <div class="mobile-trainer-info">
+          <div class="mobile-trainer-name">Алексей Петров</div>
+          <div class="mobile-trainer-desc">Эксперт по силовым тренировкам.<br>Мастер спорта.<br>Вдохновляет и поддерживает на каждом этапе.</div>
+          <div class="mobile-trainer-icons">
+            <span class="mobile-trainer-icon">🏆</span>
+            <span class="mobile-trainer-icon">👨‍🏫</span>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-trainer-card">
+        <img class="mobile-trainer-photo" src="images/trainers/i.webp" alt="Мария Иванова">
+        <div class="mobile-trainer-info">
+          <div class="mobile-trainer-name">Мария Иванова</div>
+          <div class="mobile-trainer-desc">Групповые и персональные тренировки.<br>Дружелюбный подход.<br>Заряжает энергией и позитивом.</div>
+          <div class="mobile-trainer-icons">
+            <span class="mobile-trainer-icon">🏆</span>
+            <span class="mobile-trainer-icon">👩‍🏫</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Расписание -->
+    <div class="mobile-schedule">
+      <h2 class="mobile-schedule-title">Расписание</h2>
+      <div class="mobile-schedule-table-wrap">
+        <table class="mobile-schedule-table">
+          <thead>
+            <tr>
+              <th>Время</th>
+              <th>Пн</th>
+              <th>Вт</th>
+              <th>Ср</th>
+              <th>Чт</th>
+              <th>Пт</th>
+              <th>Сб</th>
+              <th>Вс</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>09:00</td><td>ALLBODY</td><td></td><td>SUPER DRIVE</td><td></td><td>SUPER DRIVE</td><td></td><td></td></tr>
+            <tr><td>10:00</td><td></td><td>PLAY FIT</td><td></td><td>SUPER DRIVE</td><td></td><td>FITBALL</td><td>FUNCTIONAL</td></tr>
+            <tr><td>11:00</td><td></td><td></td><td>YOGA</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>12:00</td><td></td><td></td><td></td><td>STRETCH MOB</td><td></td><td></td><td></td></tr>
+            <tr><td>13:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>18:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>19:00</td><td>Boxing (бокс)</td><td></td><td>Boxing (бокс)</td><td></td><td>Fighter</td><td></td><td></td></tr>
+            <tr><td>20:00</td><td>ЙОГА</td><td></td><td>ЙОГА</td><td></td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Футер -->
+    <div class="mobile-footer-info">
+      <div>ЗОЛОТОЙ ТИГР 2025</div>
+      <div>CONTACT: goldentyger@gmail.com</div>
+      <div>ИНН: 6656166123393</div>
+    </div>
+  </div>
+  <div class="corner top-left">
+    <div>ул. ЛОДЫГИНА 15<br>9:00 - 23:00</div>
+  </div>
+  <div class="corner top-center">
+    <div>КУЗНЯ ТВОЕЙ ЛУЧШЕЙ ФОРМЫ</div>
+  </div>
+  <div class="corner top-right">
+    <div><a href="#" data-section="main-section">ГЛАВНАЯ</a><br><a href="#" data-section="hall-section">ТУР</a></div>
+    <div><a href="#" data-section="prices-section">ЦЕНЫ</a><br><a href="#" data-section="trainers-section">ТРЕНЕРЫ</a></div>
+    <div><a href="#" data-section="times-section">РАСПИСАНИЕ</a></div>
+  </div>
+  
+  <div class="corner bottom-left">
+    <div>ЗОЛОТОЙ ТИГР 2025<br>CONTACT: goldentyger@gmail.com<br>ИНН: 6656166123393</div>
+  </div>
+  <div class="corner bottom-right">
+    <div>MADE BY <a href="https://ivanfedenko.netlify.app" class="">IVAN FEDENKO</a></div>
+  </div>
+  <section id="main-section" class="section-page">
+    <div class="main-visual">
+      <h1 class="main-title">GOLDEN TYGER GYM</h1>
+      <img src="images/main.png" alt="Sculpture" class="sculpture">
+      <div class="main-btns">
+        <button class="accent-btn gray">Приобрести абонемент</button>
+        <button class="accent-btn secondary">Личный кабинет</button>
+      </div>
+    </div>
+  </section>
+  <section id="hall-section" class="section-page">
+    <div class="hall-video-center">
+      <video class="hall-video-main" src="images/video/roomtour.mp4" autoplay muted loop playsinline></video>
+    </div>
+  </section>
+  <section id="prices-section" class="section-page">
+    <div class="prices-content prices-flex-row">
+      <div class="prices-cards-col">
+        <h2 class="prices-title">АБОНЕМЕНТЫ</h2>
+        <div class="price-card">
+          <div class="price-card-term">3 месяца</div>
+          <div class="price-card-price">10 500 ₽</div>
+          <div class="price-card-desc">Безлимитный доступ<br>к тренажёрному залу</div>
+        </div>
+        <div class="price-card highlight">
+          <div class="price-card-term">6 месяцев</div>
+          <div class="price-card-price">18 900 ₽</div>
+          <div class="price-card-desc">Безлимитный доступ<br>+ 2 гостевых визита</div>
+        </div>
+        <div class="price-card">
+          <div class="price-card-term">12 месяцев</div>
+          <div class="price-card-price">34 000 ₽</div>
+          <div class="price-card-desc">Безлимитный доступ<br>+ 5 гостевых визитов</div>
+        </div>
+      </div>
+      <div class="prices-table-block">
+        <div class="prices-table-title">Групповые тренировки</div>
+        <div class="prices-table">
+          <div class="prices-table-row prices-table-header">
+            <div class="prices-table-cell">Тренировка</div>
+            <div class="prices-table-cell">Цена</div>
+          </div>
+          <div class="prices-table-row">
+            <div class="prices-table-cell">Растяжка</div>
+            <div class="prices-table-cell">700 ₽</div>
+          </div>
+          <div class="prices-table-row">
+            <div class="prices-table-cell">Йога</div>
+            <div class="prices-table-cell">800 ₽</div>
+          </div>
+          <div class="prices-table-row">
+            <div class="prices-table-cell">Пилатес</div>
+            <div class="prices-table-cell">900 ₽</div>
+          </div>
+          <div class="prices-table-row">
+            <div class="prices-table-cell">Растяжка</div>
+            <div class="prices-table-cell">700 ₽</div>
+          </div>
+          <div class="prices-table-row">
+            <div class="prices-table-cell">Йога</div>
+            <div class="prices-table-cell">800 ₽</div>
+          </div>
+          <div class="prices-table-row">
+            <div class="prices-table-cell">Пилатес</div>
+            <div class="prices-table-cell">900 ₽</div>
+          </div>
+          <div class="prices-table-row">
+            <div class="prices-table-cell">Растяжка</div>
+            <div class="prices-table-cell">700 ₽</div>
+          </div>
+          <div class="prices-table-row">
+            <div class="prices-table-cell">Йога</div>
+            <div class="prices-table-cell">800 ₽</div>
+          </div>
+          <div class="prices-table-row">
+            <div class="prices-table-cell">Пилатес</div>
+            <div class="prices-table-cell">900 ₽</div>
+          </div>
+        </div>
+        <div class="trial-signup-block">
+          <div class="trial-signup-title">Записаться на пробную тренировку</div>
+          <button class="accent-btn trial-btn">Записаться</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="trainers-section" class="section-page">
+    <div class="trainers-mockup">
+      <div class="trainers-slogan">
+        <div class="slogan-big">Тренируйся<br>среди<br>сильнейших</div>
+      </div>
+      <div class="trainers-card-wrap">
+        <div class="trainer-card-mockup" id="trainer-card-mockup">
+          <!-- JS вставит содержимое тренера -->
+        </div>
+        <button class="trainer-arrow" id="trainer-next" aria-label="Следующий тренер">&gt;</button>
+      </div>
+    </div>
+  </section>
+  <script>
+const trainers = [
+  {
+    photo: 'images/trainers/Rectangle_59_1.png',
+    name: 'Арнольд Шварцнегер',
+    services: ['Улучшение силовых показателей', 'Восстановление после травм', 'Коррекция фигуры'],
+    achievements: ['МСМК по Харизме', 'Чемпион России по бороде'],
+    icons: ['<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ff9100" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="18" height="7" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>', '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ff9100" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-8 0v2"/><circle cx="12" cy="7" r="4"/></svg>']
+  },
+  {
+    photo: 'images/trainers/i.webp',
+    name: 'Алексей Петров',
+    services: ['Кроссфит', 'Силовой тренинг', 'Функциональный тренинг'],
+    achievements: ['Мастер спорта по тяжелой атлетике', 'Призёр чемпионатов СНГ'],
+    icons: ['<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ff9100" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="18" height="7" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>', '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ff9100" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-8 0v2"/><circle cx="12" cy="7" r="4"/></svg>']
+  },
+  {
+    photo: 'images/trainers/devka1.png',
+    name: 'Мария Смирнова',
+    services: ['Йога', 'Стретчинг', 'Групповые занятия'],
+    achievements: ['Победитель международных фестивалей йоги', '10 лет стажа'],
+    icons: ['<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ff9100" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5.5 21h13M12 11v10"/></svg>', '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ff9100" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17v-2a4 4 0 0 1 8 0v2"/><circle cx="12" cy="7" r="4"/></svg>']
+    
+  },
+  {
+    photo: 'images/trainers/_-2 копия.png',
+    name: 'Михаил Кузнецов',
+    services: ['Стретчинг', 'Фитнес', 'Персональные тренировки'],
+    achievements: ['Сертифицированный тренер ISSA', 'Призёр фитнес-бикини'],
+    icons: ['<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ff9100" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5.5 21h13M12 11v10"/></svg>', '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ff9100" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17v-2a4 4 0 0 1 8 0v2"/><circle cx="12" cy="7" r="4"/></svg>']
+  }
+];
+let currentTrainer = 0;
+function renderTrainer(idx, animate = false) {
+  const t = trainers[idx];
+  const card = document.getElementById('trainer-card-mockup');
+  if (animate) {
+    card.classList.add('fade-out');
+    setTimeout(() => {
+      card.innerHTML = `
+        <img class=\"trainer-photo-mockup\" src=\"${t.photo}\" alt=\"${t.name}\">
+        <div class=\"trainer-info-mockup\">
+          <div class=\"trainer-name-mockup\">${t.name}</div>
+          <div class=\"trainer-services-mockup\">${t.services.map(s=>`<div>${s}</div>`).join('')}</div>
+          <div class=\"trainer-achievements-mockup\">${t.achievements.map(a=>`<div>${a}</div>`).join('')}</div>
+          <div class=\"trainer-icons-mockup\">${t.icons.join('')}</div>
+        </div>
+      `;
+      card.classList.remove('fade-out');
+      card.classList.add('fade-in');
+      setTimeout(()=>card.classList.remove('fade-in'), 350);
+    }, 320);
+  } else {
+    card.innerHTML = `
+      <img class=\"trainer-photo-mockup\" src=\"${t.photo}\" alt=\"${t.name}\">
+      <div class=\"trainer-info-mockup\">
+        <div class=\"trainer-name-mockup\">${t.name}</div>
+        <div class=\"trainer-services-mockup\">${t.services.map(s=>`<div>${s}</div>`).join('')}</div>
+        <div class=\"trainer-achievements-mockup\">${t.achievements.map(a=>`<div>${a}</div>`).join('')}</div>
+        <div class=\"trainer-icons-mockup\">${t.icons.join('')}</div>
+      </div>
+    `;
+  }
+}
+document.getElementById('trainer-next').onclick = () => {
+  currentTrainer = (currentTrainer + 1) % trainers.length;
+  renderTrainer(currentTrainer, true);
+};
+renderTrainer(currentTrainer);
+</script>
+  <section id="rules-section" class="section-page">
+    
+  </section>
+  <section id="times-section" class="section-page">
+    <div class="schedule-block">
+      <div class="schedule-table">
+        <div class="schedule-row schedule-header">
+          <div class="schedule-cell schedule-time">Время</div>
+          <div class="schedule-cell schedule-day">пн</div>
+          <div class="schedule-cell schedule-day">вт</div>
+          <div class="schedule-cell schedule-day">ср</div>
+          <div class="schedule-cell schedule-day">чт</div>
+          <div class="schedule-cell schedule-day">пт</div>
+          <div class="schedule-cell schedule-day">сб</div>
+          <div class="schedule-cell schedule-day">вс</div>
+        </div>
+        <!-- Вставить строки расписания ниже -->
+        <div class="schedule-row"><div class="schedule-cell schedule-time">08:00</div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div></div>
+        <div class="schedule-row"><div class="schedule-cell schedule-time">08:30</div><div class="schedule-cell"></div><div class="schedule-cell">YOGA</div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell">YOGA</div><div class="schedule-cell"></div><div class="schedule-cell"></div></div>
+        <div class="schedule-row"><div class="schedule-cell schedule-time">09:00</div><div class="schedule-cell">ABL</div><div class="schedule-cell">Cycle*</div><div class="schedule-cell">SUPER DRIVE*</div><div class="schedule-cell">UPPER BODY</div><div class="schedule-cell">SUPER DRIVE*</div><div class="schedule-cell"></div><div class="schedule-cell"></div></div>
+        <div class="schedule-row"><div class="schedule-cell schedule-time">09:30</div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell">Cycle*</div><div class="schedule-cell"></div></div>
+        <div class="schedule-row"><div class="schedule-cell schedule-time">10:00</div><div class="schedule-cell">ALL BODY</div><div class="schedule-cell">PUMP TR.</div><div class="schedule-cell">TAE-BO</div><div class="schedule-cell"></div><div class="schedule-cell">FITBALL</div><div class="schedule-cell"></div><div class="schedule-cell">FUNCTIONAL STEP</div></div>
+        <div class="schedule-row"><div class="schedule-cell schedule-time">10:30</div><div class="schedule-cell"></div><div class="schedule-cell">Hot Nuts*</div><div class="schedule-cell"></div><div class="schedule-cell">STRETCHING</div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div></div>
+        <div class="schedule-row"><div class="schedule-cell schedule-time">11:00</div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div></div>
+        <div class="schedule-row"><div class="schedule-cell schedule-time">11:30</div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div></div>
+        <div class="schedule-row"><div class="schedule-cell schedule-time">12:00</div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div></div>
+        <div class="schedule-row"><div class="schedule-cell schedule-time">12:30</div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div></div>
+        <div class="schedule-row"><div class="schedule-cell schedule-time">13:00</div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div></div>
+        <div class="schedule-row"><div class="schedule-cell schedule-time">13:30</div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div></div>
+        <div class="schedule-row"><div class="schedule-cell schedule-time">14:00</div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div></div>
+        <!-- ... (оставшиеся строки по образцу) ... -->
+        <!-- Существующие строки расписания -->
+        <div class="schedule-row"><div class="schedule-cell schedule-time"></div><div class="schedule-cell"></div><div class="schedule-cell">Boxing (Бокс) *</div><div class="schedule-cell"></div><div class="schedule-cell">Boxing (Бокс) *</div><div class="schedule-cell">Cycle*</div><div class="schedule-cell"></div><div class="schedule-cell"></div></div>
+        <div class="schedule-row"><div class="schedule-cell schedule-time">09:45</div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell">PUMP TR.</div><div class="schedule-cell"></div></div>
+        <div class="schedule-row"><div class="schedule-cell schedule-time"></div><div class="schedule-cell">MMA</div><div class="schedule-cell"></div><div class="schedule-cell">MMA</div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div><div class="schedule-cell"></div></div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
