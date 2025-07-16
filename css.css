@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Fight This';
+  src: url('fonts/FightThis.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   margin: 0;
   padding: 0;
@@ -116,19 +122,21 @@ a:hover {
 }
 
 .main-title {
-  font-size: 8vw;
+  font-family: 'Fight This', 'Montserrat', Arial, sans-serif !important;
+  font-size: 11vw;
   font-weight: 900;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   text-align: center;
   line-height: 1;
   position: absolute;
-  top: 12%;
+  top: 5%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
   pointer-events: none;
   white-space: nowrap;
   opacity: 0.97;
+  letter-spacing: 0.12em;
 }
 
 .sculpture {
